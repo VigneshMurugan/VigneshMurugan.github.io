@@ -2,6 +2,14 @@
 import { ArrowDown } from "lucide-react";
 
 const Hero = () => {
+  const scrollToAbout = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    e.preventDefault();
+    const aboutSection = document.getElementById('about');
+    if (aboutSection) {
+      aboutSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <section className="min-h-screen flex flex-col justify-center items-center text-center section-padding relative">
       <div className="space-y-6">
@@ -19,8 +27,10 @@ const Hero = () => {
       
       <a
         href="#about"
+        onClick={scrollToAbout}
         className="absolute bottom-12 animate-bounce hover:text-secondary-DEFAULT transition-colors hover-lift"
         style={{ animationDelay: "0.6s" }}
+        aria-label="Scroll to About section"
       >
         <ArrowDown size={24} />
       </a>

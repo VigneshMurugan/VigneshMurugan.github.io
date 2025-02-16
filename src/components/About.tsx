@@ -1,7 +1,6 @@
-
 const About = () => {
   return (
-    <section className="section-padding bg-accent/10">
+    <section id="about" className="section-padding bg-accent/10">
       <div className="max-w-4xl mx-auto">
         <div className="animate-on-scroll">
           <span className="text-secondary-DEFAULT text-sm tracking-wider uppercase mb-4 block">
