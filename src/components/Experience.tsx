@@ -2,21 +2,45 @@
 const experiences = [
   {
     year: "2023",
-    title: "Senior Developer",
-    company: "Tech Corp",
-    description: "Led development of flagship product, mentored junior developers",
+    title: "Software Engineer P4",
+    company: "Pluralsight India",
+    description: "Leading content creation and ingestion tools team, specializing in multi-language video transcription and guides content. Tech stack: React, Node.js, PostgreSQL, AWS, Terraform",
   },
   {
-    year: "2021",
-    title: "Full Stack Developer",
-    company: "Digital Agency",
-    description: "Built scalable web applications using modern technologies",
+    year: "2022",
+    title: "Software Engineer L3",
+    company: "Twilio",
+    description: "Part of Real Time Insights team, developing services for Kafka stream processing and real-time statistics generation. Tech stack: Java, React, PostgreSQL, Aurora, AWS, Terraform",
   },
   {
     year: "2019",
-    title: "Frontend Developer",
-    company: "Startup Inc",
-    description: "Created responsive interfaces and improved user experience",
+    title: "Engineer II",
+    company: "American Express",
+    description: "Full Stack developer in Card Shop team, handling card purchase and referral journey. Tech stack: React, Node, TypeScript, PostgreSQL",
+  },
+  {
+    year: "2018",
+    title: "Senior Engineer",
+    company: "Enquero",
+    description: "Implemented multi-currency journey for Australian commerce site. Tech stack: React, Node, TypeScript, RxJS",
+  },
+  {
+    year: "2018",
+    title: "Senior Software Engineer",
+    company: "Medlife",
+    description: "Created prescription analysis tool for doctor database generation. Tech stack: Vue.js, Node, Java, Redis",
+  },
+  {
+    year: "2015",
+    title: "Technologist",
+    company: "Wipro Digital",
+    description: "Led digitalization initiatives across multiple projects. Tech stack: React, Node, D3.js, Angular, Java",
+  },
+  {
+    year: "2013",
+    title: "Senior Software Engineer",
+    company: "Odessa Technologies",
+    description: "Developed new features for leasing products. Tech stack: C#.NET, LINQ, SQL",
   },
 ];
 
@@ -28,7 +52,7 @@ const Experience = () => {
           <span className="text-secondary-DEFAULT text-sm tracking-wider uppercase mb-4 block">
             Experience
           </span>
-          <h2 className="text-3xl md:text-4xl font-bold mb-12">Career Journey</h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-12">Professional Journey</h2>
           
           <div className="space-y-12">
             {experiences.map((exp, index) => (
