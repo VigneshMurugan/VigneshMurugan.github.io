@@ -46,13 +46,74 @@
   }
 }
 
+/* Enhanced Animation Classes */
 .animate-on-scroll {
   opacity: 0;
-  transform: translateY(20px);
-  transition: all 0.6s ease-out;
+  transform: translateY(30px);
+  transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .animate-on-scroll.visible {
   opacity: 1;
   transform: translateY(0);
+}
+
+/* Staggered animation for grid items */
+.grid > .animate-on-scroll {
+  transition-delay: calc(var(--index, 0) * 100ms);
+}
+
+/* Hover animations */
+.hover-lift {
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.hover-lift:hover {
+  transform: translateY(-5px);
+}
+
+/* Text reveal animation */
+.text-reveal {
+  animation: reveal 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@keyframes reveal {
+  from {
+    clip-path: inset(0 100% 0 0);
+  }
+  to {
+    clip-path: inset(0 0 0 0);
+  }
+}
+
+/* Fade in animation */
+.fade-in {
+  animation: fadeIn 0.8s ease-out forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Scale animation */
+.scale-in {
+  animation: scaleIn 0.5s ease-out forwards;
+}
+
+@keyframes scaleIn {
+  from {
+    transform: scale(0.95);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
 }

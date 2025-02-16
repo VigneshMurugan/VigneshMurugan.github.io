@@ -58,13 +58,14 @@ const Experience = () => {
             {experiences.map((exp, index) => (
               <div
                 key={index}
-                className="flex flex-col md:flex-row gap-6 md:gap-12 relative animate-on-scroll"
+                className="flex flex-col md:flex-row gap-6 md:gap-12 relative animate-on-scroll hover-lift"
+                style={{ '--index': index } as React.CSSProperties}
               >
                 <div className="text-secondary-DEFAULT font-mono text-lg md:w-24 flex-shrink-0">
                   {exp.year}
                 </div>
-                <div>
-                  <h3 className="text-xl font-semibold mb-2">{exp.title}</h3>
+                <div className="flex-1">
+                  <h3 className="text-xl font-semibold mb-2 scale-in">{exp.title}</h3>
                   <p className="text-secondary-DEFAULT mb-2">{exp.company}</p>
                   <p className="text-secondary-foreground/70">{exp.description}</p>
                 </div>
